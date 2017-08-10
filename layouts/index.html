@@ -4,77 +4,9 @@
     <meta charset="utf-8">
     <title>Index page</title>
     <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
-    <style>
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-      }
+    <link rel="stylesheet" href="master.css">
 
-      .logo {
-        animation: logo-spin infinite 20s linear;
-        height: 65px;
-        margin: 40px;
-      }
 
-      @keyframes logo-spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-
-      .container {
-        height: 100vh;
-        display: flex;
-      }
-
-      .sidebar {
-        flex: 1;
-        background-color: #222;
-        text-align: center;
-        font-family: 'Boogaloo', cursive;
-      }
-
-      .categories {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .categories h1 {
-        color: #61dafb;
-        margin-bottom: 45px;
-        font-size: 32px;
-      }
-
-      .category {
-        color: #61dafb;
-        padding: 15px;
-        font-size: 26px;
-      }
-
-      .selected {
-        color: #222;
-        background-color: #61dafb;
-      }
-
-      .all-books {
-        flex: 3;
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      .book {
-        border: 1px solid black;
-        width: 33%;
-        height: 33.33333%;
-        text-align: center;
-      }
-
-      .book img {
-        width: 80%;
-        height: 80%;
-      }
-    </style>
   </head>
   <body>
 
@@ -96,49 +28,256 @@
       <main class="all-books">
 
         <div class="book">
-          <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
-          <h1>Author</h1>
-          <p>blah blah blah</p>
+          <div class="book-top">
+            <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+            <div class="book-shelf-changer">
+              <select>
+                <option value="none" disabled>Move to...</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want to Read</option>
+                <option value="read">Read</option>
+                <option value="none">None</option>
+              </select>
+
+            </div>
+          </div>
+
+          <h3 class="book-title">The Hobbit</h3>
+          <p class="book-authors">J.R.R. Tolkien</p>
+        </div>
+
+        <!-- Absolutely nothing -->
+
+        <div class="book">
+          <div class="book-top">
+            <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+            <div class="book-shelf-changer">
+              <select>
+                <option value="none" disabled>Move to...</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want to Read</option>
+                <option value="read">Read</option>
+                <option value="none">None</option>
+              </select>
+
+            </div>
+          </div>
+
+          <h3 class="book-title">The Hobbit</h3>
+          <p class="book-authors">J.R.R. Tolkien</p>
+        </div>
+
+        <div class="book">
+          <div class="book-top">
+            <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+            <div class="book-shelf-changer">
+              <select>
+                <option value="none" disabled>Move to...</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want to Read</option>
+                <option value="read">Read</option>
+                <option value="none">None</option>
+              </select>
+
+            </div>
+          </div>
+
+          <h3 class="book-title">The Hobbit</h3>
+          <p class="book-authors">J.R.R. Tolkien</p>
+        </div>
+
+        <div class="book">
+          <div class="book-top">
+            <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+            <div class="book-shelf-changer">
+              <select>
+                <option value="none" disabled>Move to...</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want to Read</option>
+                <option value="read">Read</option>
+                <option value="none">None</option>
+              </select>
+
+            </div>
+          </div>
+
+          <h3 class="book-title">The Hobbit</h3>
+          <p class="book-authors">J.R.R. Tolkien</p>
+        </div>
+
+        <div class="book">
+          <div class="book-top">
+            <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+            <div class="book-shelf-changer">
+              <select>
+                <option value="none" disabled>Move to...</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want to Read</option>
+                <option value="read">Read</option>
+                <option value="none">None</option>
+              </select>
+
+            </div>
+          </div>
+
+          <h3 class="book-title">The Hobbit</h3>
+          <p class="book-authors">J.R.R. Tolkien</p>
+        </div>
+
+        <div class="book">
+          <div class="book-top">
+            <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+            <div class="book-shelf-changer">
+              <select>
+                <option value="none" disabled>Move to...</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want to Read</option>
+                <option value="read">Read</option>
+                <option value="none">None</option>
+              </select>
+
+            </div>
+          </div>
+
+          <h3 class="book-title">The Hobbit</h3>
+          <p class="book-authors">J.R.R. Tolkien</p>
+        </div>
+
+        <div class="book">
+          <div class="book-top">
+            <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+            <div class="book-shelf-changer">
+              <select>
+                <option value="none" disabled>Move to...</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want to Read</option>
+                <option value="read">Read</option>
+                <option value="none">None</option>
+              </select>
+
+            </div>
+          </div>
+
+          <h3 class="book-title">The Hobbit</h3>
+          <p class="book-authors">J.R.R. Tolkien</p>
+        </div>
+
+        <div class="book">
+          <div class="book-top">
+            <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+            <div class="book-shelf-changer">
+              <select>
+                <option value="none" disabled>Move to...</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want to Read</option>
+                <option value="read">Read</option>
+                <option value="none">None</option>
+              </select>
+
+            </div>
+          </div>
+
+          <h3 class="book-title">The Hobbit</h3>
+          <p class="book-authors">J.R.R. Tolkien</p>
+        </div>
+
+        <div class="book">
+          <div class="book-top">
+            <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+            <div class="book-shelf-changer">
+              <select>
+                <option value="none" disabled>Move to...</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want to Read</option>
+                <option value="read">Read</option>
+                <option value="none">None</option>
+              </select>
+
+            </div>
+          </div>
+
+          <h3 class="book-title">The Hobbit</h3>
+          <p class="book-authors">J.R.R. Tolkien</p>
+        </div>
+
+        <div class="book">
+          <div class="book-top">
+            <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+            <div class="book-shelf-changer">
+              <select>
+                <option value="none" disabled>Move to...</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want to Read</option>
+                <option value="read">Read</option>
+                <option value="none">None</option>
+              </select>
+
+            </div>
+          </div>
+
+          <h3 class="book-title">The Hobbit</h3>
+          <p class="book-authors">J.R.R. Tolkien</p>
+        </div>
+
+        <div class="book">
+          <div class="book-top">
+            <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+            <div class="book-shelf-changer">
+              <select>
+                <option value="none" disabled>Move to...</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want to Read</option>
+                <option value="read">Read</option>
+                <option value="none">None</option>
+              </select>
+
+            </div>
+          </div>
+
+          <h3 class="book-title">TEST</h3>
+          <p class="book-authors">J.R.R. Tolkien TEST TEST TESTTE ST</p>
         </div>
         <div class="book">
-          <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
-          <h1>Author</h1>
-          <p>blah blah blah</p>
+          <div class="book-top">
+            <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+            <div class="book-shelf-changer">
+              <select>
+                <option value="none" disabled>Move to...</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want to Read</option>
+                <option value="read">Read</option>
+                <option value="none">None</option>
+              </select>
+
+            </div>
+          </div>
+
+          <h3 class="book-title">The TESTTESTT ESTTEST</h3>
+          <p class="book-authors">J.R.R. Tolkien</p>
         </div>
         <div class="book">
-          <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
-          <h1>Author</h1>
-          <p>blah blah blah</p>
-        </div>
-        <div class="book">
-          <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
-          <h1>Author</h1>
-          <p>blah blah blah</p>
-        </div>
-        <div class="book">
-          <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
-          <h1>Author</h1>
-          <p>blah blah blah</p>
-        </div>
-        <div class="book">
-          <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
-          <h1>Author</h1>
-          <p>blah blah blah</p>
-        </div>
-        <div class="book">
-          <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
-          <h1>Author</h1>
-          <p>blah blah blah</p>
-        </div>
-        <div class="book">
-          <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
-          <h1>Author</h1>
-          <p>blah blah blah</p>
+          <div class="book-top">
+            <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+            <div class="book-shelf-changer">
+              <select>
+                <option value="none" disabled>Move to...</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want to Read</option>
+                <option value="read">Read</option>
+                <option value="none">None</option>
+              </select>
+
+            </div>
+          </div>
+
+          <h3 class="book-title">The Hobbit TEST TEST TEST TEST TEST</h3>
+          <p class="book-authors">J.R.R. Tolkien TEST TEST</p>
         </div>
 
       </main>
 
     </div>
+
 
   </body>
 </html>
