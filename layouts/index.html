@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Index page</title>
+    <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .logo {
+        animation: logo-spin infinite 20s linear;
+        height: 65px;
+        margin: 40px;
+      }
+
+      @keyframes logo-spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      .container {
+        height: 100vh;
+        display: flex;
+      }
+
+      .sidebar {
+        flex: 1;
+        background-color: #222;
+        text-align: center;
+        font-family: 'Boogaloo', cursive;
+      }
+
+      .categories {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .categories h1 {
+        color: #61dafb;
+        margin-bottom: 45px;
+        font-size: 32px;
+      }
+
+      .category {
+        color: #61dafb;
+        padding: 15px;
+        font-size: 26px;
+      }
+
+      .selected {
+        color: #222;
+        background-color: #61dafb;
+      }
+
+      .all-books {
+        flex: 3;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .book {
+        border: 1px solid black;
+        width: 33%;
+        height: 33.33333%;
+        text-align: center;
+      }
+
+      .book img {
+        width: 80%;
+        height: 80%;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <aside class="sidebar">
+
+        <ul class="categories">
+          <h1>MyReads</h1>
+
+          <li class="category">Currently reading</li>
+          <li class="category">Want to read</li>
+          <li class="category">Read</li>
+
+          <li class="category selected">Test</li>
+        </ul>
+      </aside>
+
+      <main class="all-books">
+
+        <div class="book">
+          <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+          <h1>Author</h1>
+          <p>blah blah blah</p>
+        </div>
+        <div class="book">
+          <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+          <h1>Author</h1>
+          <p>blah blah blah</p>
+        </div>
+        <div class="book">
+          <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+          <h1>Author</h1>
+          <p>blah blah blah</p>
+        </div>
+        <div class="book">
+          <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+          <h1>Author</h1>
+          <p>blah blah blah</p>
+        </div>
+        <div class="book">
+          <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+          <h1>Author</h1>
+          <p>blah blah blah</p>
+        </div>
+        <div class="book">
+          <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+          <h1>Author</h1>
+          <p>blah blah blah</p>
+        </div>
+        <div class="book">
+          <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+          <h1>Author</h1>
+          <p>blah blah blah</p>
+        </div>
+        <div class="book">
+          <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
+          <h1>Author</h1>
+          <p>blah blah blah</p>
+        </div>
+
+      </main>
+
+    </div>
+
+  </body>
+</html>
