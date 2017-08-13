@@ -15,19 +15,25 @@
       <aside class="sidebar">
 
         <ul class="categories">
-          <h1>MyReads</h1>
-
+          <li><h1 class="brand">MyReads</h1></li>
           <li class="category">Currently reading</li>
           <li class="category">Want to read</li>
           <li class="category">Read</li>
-
           <li class="category selected">Test</li>
         </ul>
+
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
       </aside>
 
       <main class="all-books">
 
         <div class="book">
+
           <div class="book-top">
             <img src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api" alt="">
             <div class="book-shelf-changer">
@@ -38,7 +44,6 @@
                 <option value="read">Read</option>
                 <option value="none">None</option>
               </select>
-
             </div>
           </div>
 
@@ -278,6 +283,13 @@
 
     </div>
 
+
+    <script type="text/javascript">
+      var hamburger = document.querySelector('.hamburger-icon');
+      hamburger.addEventListener('click', function() {
+        this.classList += ' open';
+      })
+    </script>
 
   </body>
 </html>
