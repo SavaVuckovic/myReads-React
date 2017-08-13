@@ -14,19 +14,25 @@
 
       <aside class="sidebar">
 
-        <ul class="categories">
-          <li><h1 class="brand">MyReads</h1></li>
-          <li class="category">Currently reading</li>
-          <li class="category">Want to read</li>
-          <li class="category">Read</li>
-          <li class="category selected">Test</li>
-        </ul>
+        <nav class="">
 
-        <div class="hamburger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+          <h1 class="brand">MyReads</h1>
+          <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <ul class="categories">
+            <li class="category">Currently reading</li>
+            <li class="category">Want to read</li>
+            <li class="category">Read</li>
+            <li class="category selected">Test</li>
+          </ul>
+
+        </nav>
 
       </aside>
 
@@ -285,9 +291,19 @@
 
 
     <script type="text/javascript">
+
       var hamburger = document.querySelector('.hamburger-icon');
+      var categories = document.querySelector('.categories');
+
       hamburger.addEventListener('click', function() {
-        this.classList += ' open';
+        if(this.classList.value.indexOf('open') === -1) {
+          this.classList += ' open';
+          categories.style.display = 'block';
+          //= 'shown'
+        } else {
+          this.classList.value = this.classList.value.replace(' open', '');
+          categories.style.display = 'none';
+        }
       })
     </script>
 
