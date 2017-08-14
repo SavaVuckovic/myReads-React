@@ -52,6 +52,7 @@ body {
   color: #61dafb;
   padding: 15px 0;
   font-size: 26px;
+  text-decoration: none;
 }
 
 .category:hover {
@@ -118,6 +119,17 @@ body {
   cursor: pointer;
 }
 
+.find-books {
+  margin: 30px;
+  font-size: 20px;
+  padding: 20px;
+  border: 2px solid #61dafb;
+  background: rgba(97,218,251, 0.5);
+  height: 200px;
+  color: #222;
+}
+
+
 
 /* Smaller Screens */
  @media screen and (max-width: 850px) {
@@ -151,6 +163,7 @@ body {
    .book {
      flex-basis: 50%;
    }
+
  }
 
 
@@ -196,6 +209,12 @@ body {
      flex-basis: 100%;
    }
 
+   .find-books {
+     margin: 10px;
+     font-size: 18px;
+     padding: 10px;
+     height: 250px;
+   }
 
  }
 
@@ -268,3 +287,5 @@ body {
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
 }
+
+/*------------*/
