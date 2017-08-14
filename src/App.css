@@ -128,8 +128,8 @@ body {
   cursor: pointer;
 }
 
-.find-books {
-  margin: 30px;
+.no-results {
+  margin: 25px 50px;
   font-size: 20px;
   padding: 20px;
   border: 2px solid #61dafb;
@@ -137,7 +137,29 @@ body {
   height: 200px;
   color: #222;
 }
+.no-results p {
+  margin: 0;
+}
 
+.search {
+  background: #222;
+  text-align: center;
+}
+
+.search input {
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  font-weight: bold;
+}
+
+.search button {
+  padding: 10px;
+  font-weight: bold;
+  background: #61dafb;
+  color: white;
+  border: none;
+}
 
 
 /* Smaller Screens */
@@ -211,18 +233,28 @@ body {
 
 
    .all-books {
-     margin-top: 90px;
+     margin-top: 30px;
    }
 
    .book {
      flex-basis: 100%;
    }
 
-   .find-books {
+   .no-results {
      margin: 10px;
      font-size: 18px;
      padding: 10px;
-     height: 250px;
+     height: auto;
+   }
+
+   .search input {
+
+     width: 95%;
+     margin: 0;
+   }
+
+   .search button {
+     margin: 15px auto;
    }
 
  }
@@ -299,25 +331,7 @@ body {
 
 /*------------*/
 
-.search {
-  background: #222;
-  text-align: center;
-}
 
-.search input {
-  padding: 10px;
-  margin: 10px;
-  width: 300px;
-  font-weight: bold;
-}
-
-.search button {
-  padding: 10px;
-  font-weight: bold;
-  background: #61dafb;
-  color: white;
-  border: none;
-}
 
 .back {
   float: left;

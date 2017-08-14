@@ -25,10 +25,15 @@ class App extends Component {
 
   displaySearchBooks = (books) => {
     books.then((result) => {
-      console.log(result)
-      /*this.setState({
-        searchBooks: result
-      })*/
+      if (!result.error) {
+        this.setState({
+          searchBooks: result
+        })
+      } else {
+        this.setState({
+          searchBooks: 'none'
+        })
+      }
     })
   }
 
