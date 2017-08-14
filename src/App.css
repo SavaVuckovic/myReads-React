@@ -17,6 +17,10 @@ body {
   display: flex;
 }
 
+.search-container {
+  flex-direction: column;
+}
+
 .clearfix {
   clear: both;
 }
@@ -86,6 +90,11 @@ body {
 
 .book-top {
   position: relative;
+}
+
+.book-top img {
+  width: 130px;
+  height: 180px;
 }
 
 .book-title,
@@ -289,3 +298,31 @@ body {
 }
 
 /*------------*/
+
+.search {
+  background: #222;
+  text-align: center;
+}
+
+.search input {
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  font-weight: bold;
+}
+
+.search button {
+  padding: 10px;
+  font-weight: bold;
+  background: #61dafb;
+  color: white;
+  border: none;
+}
+
+.back {
+  float: left;
+  color: #61dafb;
+  margin: 15px 0 15px 15px;
+  text-decoration: none;
+  font-weight: bold;
+}

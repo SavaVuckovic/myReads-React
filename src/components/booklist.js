@@ -1,10 +1,11 @@
 import React from 'react';
+import Book from './book';
 
 const BookList = (props) => {
   const books = props.books;
-  const category = props.category;
+  const category = props.category; // implement
 
-
+  /*
   if(books.length === 0) {
     return (
       <main className='all-books'>
@@ -14,11 +15,13 @@ const BookList = (props) => {
         </div>
       </main>
     )
-  }
+  }*/
 
   return (
     <main className='all-books'>
-      Booklist
+      { books.map((book) => {
+        return (<Book key={ book.title } book={ book } />)
+      }) }
     </main>
   )
 }

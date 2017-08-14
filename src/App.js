@@ -3,20 +3,32 @@ import { Route } from 'react-router-dom';
 import './App.css';
 import Categories from './components/categories';
 import BookList from './components/booklist';
+import SearchBar from './components/searchbar';
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      books: [],
+      myBooks: [],
+      searchBooks: [],
       categories: ['Currently reading', 'Want to read', 'Read'],
-      selectedCategory: ''
+      selectedCategory: '',
+
     }
   }
 
   componentDidMount() {
     this.setState({
       selectedCategory: this.state.categories[0]
+    })
+  }
+
+  displaySearchBooks = (books) => {
+    books.then((result) => {
+      console.log(result)
+      /*this.setState({
+        searchBooks: result
+      })*/
     })
   }
 
@@ -30,14 +42,16 @@ class App extends Component {
               categories={ this.state.categories }
               onCategorySelect={ category => this.setState({ selectedCategory: category }) } />
             <BookList
-              books={ this.state.books }
+              books={ this.state.myBooks }
               category={ this.state.selectedCategory } />
           </div>
         )} />
 
-        <Route path='/' render = { ({ history }) => (
-          <div className="container">
-            Search
+        <Route path='/search' render = { ({ history }) => (
+          <div className="container search-container">
+            <SearchBar
+              searchForBooks={ this.displaySearchBooks }/>
+            <BookList books={ this.state.searchBooks } />
           </div>
         )} />
 
