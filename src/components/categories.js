@@ -6,7 +6,7 @@ class Categories extends Component {
     return categories.map((category, index) => {
       return (
         <li
-          className='category'
+          className={'category' + ( category === this.props.selectedCategory ? ' selected' : '' )}
           key={ `category_${ index }` }
           onClick={ () => this.props.onCategorySelect(category) }>{ category }</li>
       )

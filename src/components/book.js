@@ -10,7 +10,7 @@ class Book extends Component {
     return (
       <div className='book'>
         <div className='book-top'>
-          <img src={ this.props.book.imageLinks.smallThumbnail } alt="book" />
+          <img src={ this.props.book.img } alt="book" />
           <div className='book-shelf-changer'>
             <select onChange={ this.doSomething() }>
               <option value='none' disabled>Move to...</option>

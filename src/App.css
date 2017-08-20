@@ -41,7 +41,8 @@
 
 .category {
   color: #61dafb;
-  padding: 15px 0;
+  padding: 10px 0;
+  margin: 10px 0;
   font-size: 26px;
   text-decoration: none;
 }
@@ -71,6 +72,7 @@
 
 .book-top {
   position: relative;
+  margin-bottom: 10px;
 }
 
 .book-top img {

@@ -14,6 +14,8 @@ class App extends Component {
       categories: ['Currently reading', 'Want to read', 'Read'],
       selectedCategory: ''
     }
+
+    this.displaySearchBooks = this.displaySearchBooks.bind(this);
   }
 
   componentDidMount() {
@@ -22,11 +24,20 @@ class App extends Component {
     })
   }
 
-  displaySearchBooks = (books) => {
+  displaySearchBooks(books) {
     books.then((result) => {
       if (!result.error) {
+        let searchBooks = result.map((book) => {
+          return {
+            title: book.title,
+            authors: book.authors,
+            img: book.imageLinks.smallThumbnail,
+            category: null
+          }
+        })
+
         this.setState({
-          searchBooks: result
+          searchBooks
         })
       } else {
         this.setState({
@@ -44,6 +55,7 @@ class App extends Component {
           <div className="container">
             <Categories
               categories={ this.state.categories }
+              selectedCategory={ this.state.selectedCategory }
               onCategorySelect={ category => this.setState({ selectedCategory: category }) } />
             <BookList
               books={ this.state.myBooks }

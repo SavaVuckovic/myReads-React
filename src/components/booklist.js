@@ -19,7 +19,17 @@ const BookList = (props) => {
   }
 
   if(category) {
-    //
+    var filteredBooks = books.filter((book) => {
+      return book.category === category;
+    })
+
+    return (
+      <main className='all-books'>
+        { filteredBooks.map((book, index) => {
+          return (<Book key={ `book_${ index }` } book={ book } />)
+        }) }
+      </main>
+    )
   }
 
   return (
