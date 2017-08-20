@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class Book extends Component {
+  // temp, to help with implementing select functionallity
   doSomething() {
     console.log('exactly')
   }
@@ -9,7 +10,7 @@ class Book extends Component {
     return (
       <div className='book'>
         <div className='book-top'>
-          <img src={ this.props.book.imageLinks.smallThumbnail } alt="smth" />
+          <img src={ this.props.book.imageLinks.smallThumbnail } alt="book" />
           <div className='book-shelf-changer'>
             <select onChange={ this.doSomething() }>
               <option value='none' disabled>Move to...</option>
@@ -20,7 +21,7 @@ class Book extends Component {
             </select>
           </div>
         </div>
-        <h3 className="book-title">{ this.props.book.title }</h3>
+        <h4 className="book-title">{ this.props.book.title }</h4>
         <p className="book-authors">{ this.props.book.authors }</p>
       </div>
     )
@@ -28,8 +29,3 @@ class Book extends Component {
 }
 
 export default Book;
-
-/*
-https://codepen.io/anon/pen/Yxrwyj
-https://stackoverflow.com/questions/14651955/capture-events-in-select-list
-*/

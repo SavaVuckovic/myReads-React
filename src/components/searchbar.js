@@ -12,22 +12,21 @@ class SearchBar extends Component {
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
 
-    this.props.searchForBooks(getAll())
+    this.props.searchForBooks(getAll());
   }
 
   onInputChange(e) {
     this.setState({
       term: e.target.value
-    })
+    });
   }
 
   onFormSubmit(e) {
-    e.preventDefault()
-    console.log(search(this.state.term, 10))
-    this.props.searchForBooks(search(this.state.term, 10))
+    e.preventDefault();
+    this.props.searchForBooks(search(this.state.term, 10));
     this.setState({
       term: ''
-    })
+    });
   }
 
   render() {

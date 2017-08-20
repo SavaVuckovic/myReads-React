@@ -12,8 +12,7 @@ class App extends Component {
       myBooks: [],
       searchBooks: [],
       categories: ['Currently reading', 'Want to read', 'Read'],
-      selectedCategory: '',
-
+      selectedCategory: ''
     }
   }
 

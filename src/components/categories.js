@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 class Categories extends Component {
-
   renderCategories(categories) {
     return categories.map((category, index) => {
       return (
