@@ -61,6 +61,9 @@ class App extends Component {
               books={ this.state.myBooks }
               category={ this.state.selectedCategory }
               onSelectChange={ book => {
+                // TEST
+                console.log('BOOK CHANGED');
+                console.log(book);
                 this.setState((prevState) => ({
                   myBooks: prevState.myBooks.push(book)
                 }))
@@ -75,9 +78,9 @@ class App extends Component {
             <BookList
               books={ this.state.searchBooks }
               onSelectChange={ book => {
-                this.setState((prevState) => ({
-                  myBooks: prevState.myBooks.push(book)
-                }))
+                this.setState((prevState) => {
+                  prevState.myBooks.push(book)
+                })
               } } />
           </div>
         )} />

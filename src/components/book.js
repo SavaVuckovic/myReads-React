@@ -7,8 +7,8 @@ class Book extends Component {
       category: this.props.book.category
     };
     this.options = [
-      'CurrentlyReading',
-      'Want to Read',
+      'Currently reading',
+      'Want to read',
       'Read',
       'None'
     ];
@@ -17,7 +17,6 @@ class Book extends Component {
   render() {
     return (
       <div className='book'>
-        <div>TEST: { this.state.category }</div>
         <div className='book-top'>
           <img src={ this.props.book.img } alt="book" />
           <div className='book-shelf-changer'>
