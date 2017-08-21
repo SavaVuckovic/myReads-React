@@ -26,7 +26,12 @@ const BookList = (props) => {
     return (
       <main className='all-books'>
         { filteredBooks.map((book, index) => {
-          return (<Book key={ `book_${ index }` } book={ book } />)
+          return (
+            <Book
+              key={ `book_${ index }` }
+              book={ book }
+              onSelectChange={ props.onSelectChange }/>
+          )
         }) }
       </main>
     )
@@ -35,7 +40,12 @@ const BookList = (props) => {
   return (
     <main className='all-books'>
       { books.map((book, index) => {
-        return (<Book key={ `book_${ index }` } book={ book } />)
+        return (
+          <Book
+            key={ `book_${ index }` }
+            book={ book }
+            onSelectChange={ props.onSelectChange }/>
+        )
       }) }
     </main>
   )

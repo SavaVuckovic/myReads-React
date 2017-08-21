@@ -59,7 +59,12 @@ class App extends Component {
               onCategorySelect={ category => this.setState({ selectedCategory: category }) } />
             <BookList
               books={ this.state.myBooks }
-              category={ this.state.selectedCategory } />
+              category={ this.state.selectedCategory }
+              onSelectChange={ book => {
+                this.setState((prevState) => ({
+                  myBooks: prevState.myBooks.push(book)
+                }))
+              } } />
           </div>
         )} />
 
@@ -67,7 +72,13 @@ class App extends Component {
           <div className="container search-container">
             <SearchBar
               searchForBooks={ this.displaySearchBooks }/>
-            <BookList books={ this.state.searchBooks } />
+            <BookList
+              books={ this.state.searchBooks }
+              onSelectChange={ book => {
+                this.setState((prevState) => ({
+                  myBooks: prevState.myBooks.push(book)
+                }))
+              } } />
           </div>
         )} />
 
