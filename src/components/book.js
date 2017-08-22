@@ -38,7 +38,10 @@ class Book extends Component {
               } }>
               <option value='none' disabled>Move to...</option>
               { this.options.map((option, index) => (
-                <option key={ `option_${ index }` } value={ option }>{ option }</option>
+                <option
+                  key={ `option_${ index }` }
+                  value={ option }
+                  selected={ this.state.category === option ? true : false }>{ option }</option>
               )) }
             </select>
           </div>

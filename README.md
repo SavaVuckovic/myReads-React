@@ -10,4 +10,10 @@ It allows users to select and categorize books they have read, are currently rea
 
 In order to successfully run this program, it is required to have Node.js and npm installed. Further instructions for downloading and installing Node can be found on  [official Node website](https://nodejs.org/en/).
 
-... I'm too tired, tomorrow :V
+After you have installed Node, navigate to the project directory from the command line.
+
+run `npm install` to install dependencies
+
+run `npm start` to start the application on your local machine
+
+Now you can visit `localhost:3000` in your favorite browser and view the application.

@@ -32,9 +32,12 @@ class App extends Component {
             title: book.title,
             authors: book.authors,
             img: book.imageLinks.smallThumbnail,
-            category: null
+            category: this.state.myBooks.book ? false : null
           }
         })
+
+        //test
+        console.log(this.state.myBooks.book)
 
         this.setState({
           searchBooks
