@@ -16,6 +16,7 @@ class App extends Component {
     }
 
     this.displaySearchBooks = this.displaySearchBooks.bind(this);
+    this.moveBookToShelf = this.moveBookToShelf.bind(this);
   }
 
   componentDidMount() {
@@ -32,13 +33,9 @@ class App extends Component {
             title: book.title,
             authors: book.authors,
             img: book.imageLinks.smallThumbnail,
-            category: this.state.myBooks.book ? false : null
+            category: null ///////////////////
           }
         })
-
-        //test
-        console.log(this.state.myBooks.book)
-
         this.setState({
           searchBooks
         })
@@ -48,6 +45,22 @@ class App extends Component {
         })
       }
     })
+  }
+
+  moveBookToShelf(book) {
+    var myBookTitles = this.state.myBooks.map((book) => {
+      return book.title
+    })
+    if(myBookTitles.includes(book.title)) {
+      var currentBook = this.state.myBooks[myBookTitles.indexOf(book.title)];
+      this.setState((prevState) => {
+        myBooks[currentBook]: book.category
+      })
+    } else {
+      this.setState((prevState) => {
+        prevState.myBooks.push(book)
+      })
+    }
   }
 
   render() {
@@ -63,14 +76,7 @@ class App extends Component {
             <BookList
               books={ this.state.myBooks }
               category={ this.state.selectedCategory }
-              onSelectChange={ book => {
-                // TEST
-                console.log('BOOK CHANGED');
-                console.log(book);
-                this.setState((prevState) => ({
-                  myBooks: prevState.myBooks.push(book)
-                }))
-              } } />
+              onSelectChange={ this.moveBookToShelf } />
           </div>
         )} />
 
@@ -80,11 +86,7 @@ class App extends Component {
               searchForBooks={ this.displaySearchBooks }/>
             <BookList
               books={ this.state.searchBooks }
-              onSelectChange={ book => {
-                this.setState((prevState) => {
-                  prevState.myBooks.push(book)
-                })
-              } } />
+              onSelectChange={ this.moveBookToShelf } />
           </div>
         )} />
 

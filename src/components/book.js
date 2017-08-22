@@ -4,7 +4,8 @@ class Book extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      category: this.props.book.category
+      category: this.props.book.category,
+
     };
     this.options = [
       'Currently reading',
@@ -24,6 +25,7 @@ class Book extends Component {
               name='category-select'
               id='category-select'
               ref='select'
+              value={ this.state.category !== null ? this.state.category : 'None' }
               onChange={ () => {
                 let select = this.refs.select;
                 this.props.onSelectChange({
@@ -38,10 +40,7 @@ class Book extends Component {
               } }>
               <option value='none' disabled>Move to...</option>
               { this.options.map((option, index) => (
-                <option
-                  key={ `option_${ index }` }
-                  value={ option }
-                  selected={ this.state.category === option ? true : false }>{ option }</option>
+                <option key={ `option_${ index }` } value={ option } >{ option }</option>
               )) }
             </select>
           </div>
@@ -54,12 +53,3 @@ class Book extends Component {
 }
 
 export default Book;
-
-/*
-onChange={ () => {
-  let select = this.refs.select;
-  this.setState({
-    category: select.options[select.selectedIndex].value
-  })
-} }>
-*/
