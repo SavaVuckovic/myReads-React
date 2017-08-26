@@ -12,7 +12,7 @@
   clear: both;
 }
 
-/* Sidebar */
+/* Categories */
 
 .navigation {
   flex: 1 1 25%;
@@ -146,8 +146,9 @@
 
 
 /* Smaller Screens */
+
  @media screen and (max-width: 850px) {
-   /* Sidebar */
+   /* Categories */
    .navigation {
      flex: 1 1 25%;
    }
@@ -163,10 +164,6 @@
    .category {
      padding: 12px;
      font-size: 22px;
-   }
-
-   .category:hover {
-     font-size: 24px;
    }
 
    /* Main */
@@ -242,10 +239,7 @@
 
  }
 
-
-
-
- /* Toggle */
+ /* Toggle button */
 .hamburger-icon {
   width: 40px;
   height: 40px;
@@ -312,10 +306,7 @@
   transform: rotate(-135deg);
 }
 
-/*------------*/
-
-
-
+/* Back button */
 .back {
   float: left;
   color: #61dafb;

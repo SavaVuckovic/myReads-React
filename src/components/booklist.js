@@ -3,8 +3,6 @@ import Book from './book';
 
 const BookList = (props) => {
   const books = props.books;
-  const category = props.category;
-
   if(books === 'none') {
     return (
       <main className='all-books'>
@@ -15,26 +13,7 @@ const BookList = (props) => {
             rel="noopener noreferrer"> here</a></p>
         </div>
       </main>
-    )
-  }
-
-  if(category) {
-    var filteredBooks = books.filter((book) => {
-      return book.category === category;
-    })
-
-    return (
-      <main className='all-books'>
-        { filteredBooks.map((book, index) => {
-          return (
-            <Book
-              key={ `book_${ index }` }
-              book={ book }
-              onSelectChange={ props.onSelectChange }/>
-          )
-        }) }
-      </main>
-    )
+    );
   }
 
   return (
@@ -45,10 +24,10 @@ const BookList = (props) => {
             key={ `book_${ index }` }
             book={ book }
             onSelectChange={ props.onSelectChange }/>
-        )
+        );
       }) }
     </main>
-  )
+  );
 }
 
 export default BookList;

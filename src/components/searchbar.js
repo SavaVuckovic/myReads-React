@@ -4,29 +4,21 @@ import { getAll, search } from '../BooksAPI';
 
 class SearchBar extends Component {
   constructor(props) {
-    super(props)
-    this.state = {
-      term: ''
-    };
-
+    super(props);
+    this.state = {term: ''};
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
-
     this.props.searchForBooks(getAll());
   }
 
   onInputChange(e) {
-    this.setState({
-      term: e.target.value
-    });
+    this.setState({term: e.target.value});
   }
 
   onFormSubmit(e) {
     e.preventDefault();
     this.props.searchForBooks(search(this.state.term, 10));
-    this.setState({
-      term: ''
-    });
+    this.setState({term: ''});
   }
 
   render() {
@@ -40,8 +32,8 @@ class SearchBar extends Component {
           onChange={ this.onInputChange }/>
         <button type="submit">Search</button>
       </form>
-    )
+    );
   }
 }
 
-export default SearchBar
+export default SearchBar;
