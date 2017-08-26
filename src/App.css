@@ -12,7 +12,7 @@
   clear: both;
 }
 
-/* Categories */
+/* Shelves */
 
 .navigation {
   flex: 1 1 25%;
@@ -25,7 +25,7 @@
   display: none;
 }
 
-.categories {
+.shelves {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -39,7 +39,7 @@
   font-size: 32px;
 }
 
-.category {
+.shelf {
   color: #61dafb;
   padding: 10px 0;
   margin: 10px 0;
@@ -148,12 +148,12 @@
 /* Smaller Screens */
 
  @media screen and (max-width: 850px) {
-   /* Categories */
+   /* Shelves */
    .navigation {
      flex: 1 1 25%;
    }
 
-   .categories {
+   .shelves {
      list-style-type: none;
      padding: 0;
      margin: 0;
@@ -161,7 +161,7 @@
      width: 25%;
    }
 
-   .category {
+   .shelf {
      padding: 12px;
      font-size: 22px;
    }
@@ -205,7 +205,7 @@
 
 
 
-   .categories {
+   .shelves {
      width: 100%;
      position: static;
      display: none;

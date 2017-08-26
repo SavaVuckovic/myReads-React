@@ -3,6 +3,7 @@ import Book from './book';
 
 const BookList = (props) => {
   const books = props.books;
+  const shelves = props.shelves;
   if(books === 'none') {
     return (
       <main className='all-books'>
@@ -22,6 +23,7 @@ const BookList = (props) => {
         return (
           <Book
             key={ `book_${ index }` }
+            shelves={ shelves }
             book={ book }
             onSelectChange={ props.onSelectChange }/>
         );

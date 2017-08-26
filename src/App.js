@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
+import { update, getAll } from './BooksAPI';
 import './App.css';
-import Categories from './components/categories';
+import Shelves from './components/shelves';
 import BookList from './components/booklist';
 import SearchBar from './components/searchbar';
 
@@ -9,38 +10,53 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      categories: ['Currently reading', 'Want to read', 'Read'],
-      selectedCategory: '',
+      selectedShelf: '',
       searchPageBooks: [],
-      shelves: {}
-    }
+      myBooks: []
+    };
+    this.shelves = [
+      {
+        value: 'currentlyReading',
+        name: 'Currently reading'
+      },
+      {
+        value: 'wantToRead',
+        name: 'Want to read'
+      },
+      {
+        value: 'read',
+        name: 'Read'
+      }
+    ];
 
     this.displaySearchBooks = this.displaySearchBooks.bind(this);
     this.moveBookToShelf = this.moveBookToShelf.bind(this);
   }
 
   componentWillMount() {
-    this.setState({
-      selectedCategory: this.state.categories[0],
-      shelves: this.state.categories.map((category) => {
-        return {
-          category,
-          books: []
-        }
-      })
-    });
+    getAll().then((result) => {
+      if (!result.error) {
+        let myBooks = result.map((book) => {
+          return book;
+        });
+        this.setState({
+          myBooks,
+          selectedShelf: this.shelves[0].value
+        });
+      }
+    })
   }
 
   displaySearchBooks(books) {
     books.then((result) => {
       if (!result.error) {
         let searchPageBooks = result.map((book) => {
-          return {
-            title: book.title,
-            authors: book.authors,
-            img: book.imageLinks.smallThumbnail,
-            category: null ////// check if a book already exists in a shelf //////
+          for(let b of this.state.myBooks) {
+            if(b.id === book.id) {
+              book.shelf = b.shelf;
+            }
           }
+          return book;
         });
         this.setState({searchPageBooks});
       } else {
@@ -49,16 +65,24 @@ class App extends Component {
     })
   }
 
-  moveBookToShelf(book) {
-    console.log(book);
-    console.log('book should be moved');
+  displayBooksFromShelf() {
+    let books = this.state.myBooks.filter((book) => {
+      return book.shelf === this.state.selectedShelf;
+    });
+    return books;
   }
 
-  displayBooksFromShelf() {
-    let shelf = this.state.shelves.filter((shelf) => {
-      return shelf.category === this.state.selectedCategory
+  moveBookToShelf(book, shelf) {
+    update(book, shelf).then((data) => {
+      this.setState((prevState) => {
+        let newBooks = prevState.myBooks.filter((b) => {
+          return b.id !== book.id
+        });
+        book.shelf = shelf;
+        newBooks.push(book);
+        return {myBooks: newBooks};
+      });
     });
-    return shelf[0].books;
   }
 
   render() {
@@ -67,11 +91,12 @@ class App extends Component {
 
         <Route exact path='/' render = { () => (
           <div className="container">
-            <Categories
-              categories={ this.state.categories }
-              selectedCategory={ this.state.selectedCategory }
-              onCategorySelect={ category => this.setState({ selectedCategory: category }) } />
+            <Shelves
+              shelves={ this.shelves }
+              selectedShelf={ this.state.selectedShelf }
+              onSelect={ shelf => this.setState({ selectedShelf: shelf }) } />
             <BookList
+              shelves={ this.shelves }
               books={ this.displayBooksFromShelf() }
               onSelectChange={ this.moveBookToShelf } />
           </div>
@@ -82,6 +107,7 @@ class App extends Component {
             <SearchBar
               searchForBooks={ this.displaySearchBooks }/>
             <BookList
+              shelves={ this.shelves }
               books={ this.state.searchPageBooks }
               onSelectChange={ this.moveBookToShelf } />
           </div>

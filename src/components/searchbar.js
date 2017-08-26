@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { getAll, search } from '../BooksAPI';
+import { search } from '../BooksAPI';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -8,7 +8,6 @@ class SearchBar extends Component {
     this.state = {term: ''};
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
-    this.props.searchForBooks(getAll());
   }
 
   onInputChange(e) {

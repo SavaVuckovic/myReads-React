@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class Categories extends Component {
+class Shelves extends Component {
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
@@ -10,10 +10,10 @@ class Categories extends Component {
   toggle() {
     if(this.refs.hamburger.classList.value.indexOf('open') === -1) {
       this.refs.hamburger.classList += ' open';
-      this.refs.categories.style.display = 'block';
+      this.refs.shelves.style.display = 'block';
     } else {
       this.refs.hamburger.classList.value = this.refs.hamburger.classList.value.replace(' open', '');
-      this.refs.categories.style.display = 'none';
+      this.refs.shelves.style.display = 'none';
     }
   }
 
@@ -28,22 +28,22 @@ class Categories extends Component {
           <span /><span /><span />
         </div>
         <div className='clearfix' />
-        <ul className='categories' ref='categories'>
-          { this.props.categories.map((category, index) => {
+        <ul className='shelves' ref='shelves'>
+          { this.props.shelves.map((shelf, index) => {
             return (
               <li
-                className={'category' + ( category === this.props.selectedCategory ? ' selected' : '' )}
-                key={ `category_${ index }` }
-                onClick={ () => this.props.onCategorySelect(category) }>{ category }</li>
+                className={'shelf' + ( shelf.value === this.props.selectedShelf ? ' selected' : '' )}
+                key={ `shelf_${ index }` }
+                onClick={ () => this.props.onSelect(shelf.value) }>{ shelf.name }</li>
             )
           }) }
           <Link
             to='/search'
-            className="category">Find more books</Link>
+            className="shelf">Find more books</Link>
         </ul>
       </nav>
     );
   }
 }
 
-export default Categories;
+export default Shelves;
